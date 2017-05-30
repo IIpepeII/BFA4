@@ -1,6 +1,4 @@
-/**
- * Created by petya on 2017.05.30..
- */
+
 public class Main {
 
     public static String hello(){
@@ -8,6 +6,15 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println(hello());
+        User user =  User.getInstance();
+        user.setActualLocation(1,4);
+        user.setActualLocation(3,5);
+        user.setActualLocation(4,3);
+        user.setActualLocation(2,1);
+        System.out.println(user.getLocationHistory());
+
+        City budapest = new City("Budapest",1,4);
+        System.out.println(budapest.position);
+
     }
 }
